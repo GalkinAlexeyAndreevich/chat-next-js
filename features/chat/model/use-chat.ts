@@ -4,7 +4,6 @@ import { useState } from "react"
 import type { Message } from "@/shared/types"
 import type { Chat } from "../types"
 import { initialChats, initialMessages } from "../mocks/data"
-import { formatChatTimestamp } from "@/features/messages"
 
 export function useChat() {
   const [selectedChatId, setSelectedChatId] = useState<string | undefined>(undefined)
@@ -37,7 +36,7 @@ export function useChat() {
     setChats((prev) =>
       prev.map((chat) =>
         chat.id === selectedChatId
-          ? { ...chat, lastMessage: text, timestamp: formatChatTimestamp(newMessage.timestamp), unreadCount: undefined }
+          ? { ...chat, lastMessage: text, timestamp: newMessage.timestamp, unreadCount: undefined }
           : chat
       )
     )

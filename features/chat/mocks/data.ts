@@ -1,6 +1,5 @@
 import type { Message } from "@/shared/types"
 import type { Chat } from "../types"
-import { formatChatTimestamp } from "@/features/messages"
 
 const now = new Date()
 const today2 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 33)
@@ -15,26 +14,26 @@ export const initialChats: Chat[] = [
     id: "1",
     name: "Мария",
     lastMessage: "Конечно! Во сколько?",
-    timestamp: formatChatTimestamp(today3),
+    timestamp: today3,
     unreadCount: 2,
   },
   {
     id: "2",
     name: "Алексей",
     lastMessage: "Привет! Как дела?",
-    timestamp: formatChatTimestamp(today5),
+    timestamp: today5,
   },
   {
     id: "3",
     name: "Анна",
     lastMessage: "Спасибо за помощь!",
-    timestamp: formatChatTimestamp(yesterday),
+    timestamp: yesterday,
   },
   {
     id: "4",
     name: "Дмитрий",
     lastMessage: "Встречаемся в 18:00",
-    timestamp: formatChatTimestamp(lastWeek),
+    timestamp: lastWeek,
   },
 ]
 

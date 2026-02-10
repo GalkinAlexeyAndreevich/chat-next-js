@@ -3,6 +3,7 @@
 import { Avatar, AvatarFallback } from "@/shared/ui/avatar"
 import { cn } from "@/lib/utils"
 import type { Chat } from "../types"
+import { formatChatTimestamp } from "../lib/utils"
 
 interface ChatListProps {
   chats: Chat[]
@@ -34,16 +35,16 @@ export function ChatList({ chats, selectedChatId, onChatSelect }: ChatListProps)
                 <div className="flex items-center justify-between mb-1">
                   <span className="font-semibold text-sm truncate">{chat.name}</span>
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                    {chat.timestamp}
+                    {formatChatTimestamp(chat.timestamp)}
                   </span>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-xs text-muted-foreground truncate">{chat.lastMessage}</p>
                   {chat.unreadCount && chat.unreadCount > 0 && (
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center">
+                    <div className="flex-shrink-0 h-5 w-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center">
                       {chat.unreadCount}
-                      </div>
-                    )}
+                    </div>
+                  )}
                 </div>
               </div>
             </button>

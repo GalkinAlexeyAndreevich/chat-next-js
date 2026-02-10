@@ -1,5 +1,6 @@
 export { ChatList } from "./ui/chat-list"
 export { useChat } from "./model/use-chat"
 export { initialChats, initialMessages } from "./mocks/data"
+export { formatChatTimestamp } from "./lib/utils"
 export type { Chat } from "./types"
 export type { Message } from "@/shared/types"

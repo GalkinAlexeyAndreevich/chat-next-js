@@ -13,7 +13,6 @@ export {
   getMessageBubbleClasses, 
   getTimestampColor,
   formatMessageTime,
-  formatChatTimestamp,
   formatDateSeparator,
   isSameDay
 } from "./lib/utils"
