@@ -1,0 +1,7 @@
+export { MessageList } from "./ui/message-list"
+export { ChatList } from "./ui/chat-list"
+export { ChatHeader } from "./ui/chat-header"
+export { MessageInput } from "./ui/message-input"
+export { useChat } from "./model/use-chat"
+export { initialChats, initialMessages } from "./mocks/data"
+export type { Message, Chat } from "./types"
