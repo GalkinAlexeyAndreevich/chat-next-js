@@ -1,8 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import type { Message, Chat } from "../types"
+import type { Message } from "@/shared/types"
+import type { Chat } from "../types"
 import { initialChats, initialMessages } from "../mocks/data"
+import { formatChatTimestamp } from "@/features/messages"
 
 export function useChat() {
   const [selectedChatId, setSelectedChatId] = useState<string | undefined>(undefined)
@@ -17,9 +19,13 @@ export function useChat() {
 
     const newMessage: Message = {
       id: Date.now().toString(),
-      author: "Вы",
+      author: {
+        id: "user-1",
+        name: "Вы",
+        avatar: "",
+      },
       text,
-      timestamp: new Date().toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" }),
+      timestamp: new Date(),
       isOwn: true,
     }
 
@@ -28,11 +34,10 @@ export function useChat() {
       [selectedChatId]: [...(prev[selectedChatId] || []), newMessage],
     }))
 
-    // Обновляем последнее сообщение в списке чатов
     setChats((prev) =>
       prev.map((chat) =>
         chat.id === selectedChatId
-          ? { ...chat, lastMessage: text, timestamp: "только что", unreadCount: undefined }
+          ? { ...chat, lastMessage: text, timestamp: formatChatTimestamp(newMessage.timestamp), unreadCount: undefined }
           : chat
       )
     )

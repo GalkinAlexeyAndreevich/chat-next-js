@@ -1,6 +1,6 @@
 "use client"
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/shared/ui/avatar"
 import { cn } from "@/lib/utils"
 import type { Chat } from "../types"
 
@@ -46,7 +46,6 @@ export function ChatList({ chats, selectedChatId, onChatSelect }: ChatListProps)
                     )}
                 </div>
               </div>
-
             </button>
           ))}
         </div>
