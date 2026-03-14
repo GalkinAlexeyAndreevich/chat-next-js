@@ -1,0 +1,55 @@
+{
+  "common": {
+    "cancel": "Отмена",
+    "close": "Закрыть"
+  },
+  "chat": {
+    "title": "Чаты",
+    "newChat": "Новый чат",
+    "selectChat": "Выберите чат для начала общения",
+    "defaultLastMessage": "Новый чат"
+  },
+  "createChat": {
+    "modalTitle": "Новый чат",
+    "form": {
+      "nameLabel": "Название чата",
+      "namePlaceholder": "Например: Рабочая группа",
+      "descriptionLabel": "Описание",
+      "descriptionOptional": "(необязательно)",
+      "descriptionPlaceholder": "Краткое описание чата",
+      "submit": "Создать чат",
+      "submitting": "Создание…",
+      "cancel": "Отмена"
+    },
+    "validation": {
+      "nameRequired": "Введите название чата",
+      "nameMax": "Название не более 100 символов",
+      "descriptionMax": "Описание не более 500 символов"
+    }
+  },
+  "messages": {
+    "inputPlaceholder": "Написать сообщение...",
+    "online": "в сети"
+  },
+  "messagesDate": {
+    "today": "Сегодня",
+    "yesterday": "Вчера",
+    "weekdays": {
+      "sun": "Воскресенье",
+      "mon": "Понедельник",
+      "tue": "Вторник",
+      "wed": "Среда",
+      "thu": "Четверг",
+      "fri": "Пятница",
+      "sat": "Суббота"
+    }
+  },
+  "chatList": {
+    "weekdaysShort": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"]
+  },
+  "you": "Вы",
+  "examples": {
+    "loadingComments": "Загрузка комментариев...",
+    "commentPlaceholder": "Написать комментарий..."
+  }
+}

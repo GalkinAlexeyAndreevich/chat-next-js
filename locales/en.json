@@ -1,0 +1,55 @@
+{
+  "common": {
+    "cancel": "Cancel",
+    "close": "Close"
+  },
+  "chat": {
+    "title": "Chats",
+    "newChat": "New chat",
+    "selectChat": "Select a chat to start messaging",
+    "defaultLastMessage": "New chat"
+  },
+  "createChat": {
+    "modalTitle": "New chat",
+    "form": {
+      "nameLabel": "Chat name",
+      "namePlaceholder": "e.g. Work group",
+      "descriptionLabel": "Description",
+      "descriptionOptional": "(optional)",
+      "descriptionPlaceholder": "Brief chat description",
+      "submit": "Create chat",
+      "submitting": "Creating…",
+      "cancel": "Cancel"
+    },
+    "validation": {
+      "nameRequired": "Enter chat name",
+      "nameMax": "Name must be 100 characters or less",
+      "descriptionMax": "Description must be 500 characters or less"
+    }
+  },
+  "messages": {
+    "inputPlaceholder": "Type a message...",
+    "online": "online"
+  },
+  "messagesDate": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "weekdays": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    }
+  },
+  "chatList": {
+    "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  },
+  "you": "You",
+  "examples": {
+    "loadingComments": "Loading comments...",
+    "commentPlaceholder": "Write a comment..."
+  }
+}
