@@ -14,8 +14,7 @@ interface ChatListProps {
 export function ChatList({ chats, selectedChatId, onChatSelect }: ChatListProps) {
   return (
     <div className="h-full overflow-y-auto border-r bg-muted/30">
-      <div className="p-4">
-        <h2 className="mb-4 text-lg font-semibold">Чаты</h2>
+      <div className="p-4 pt-2">
         <div className="space-y-1">
           {chats.map((chat) => (
             <button
@@ -34,7 +33,10 @@ export function ChatList({ chats, selectedChatId, onChatSelect }: ChatListProps)
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between mb-1">
                   <span className="font-semibold text-sm truncate">{chat.name}</span>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
+                  <span 
+                    className="text-xs text-muted-foreground whitespace-nowrap ml-2"
+                    suppressHydrationWarning
+                  >
                     {formatChatTimestamp(chat.timestamp)}
                   </span>
                 </div>
